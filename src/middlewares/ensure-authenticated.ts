@@ -24,6 +24,7 @@ function ensureAuthenticated(request: Request, response: Response, next: NextFun
             id: user_id,
             role,
         }
+        return next()
     } catch (error) {
         next(error)
     }
